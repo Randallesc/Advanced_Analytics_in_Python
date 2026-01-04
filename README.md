@@ -1,160 +1,190 @@
-# Churn Prediction Model with XGBoost
+# Advanced Analytics in Python
 
-This project was part of the BCG Advanced Analytics virtual internship. The purpose of this assigned analysis was to attempt to predict churn over a dataset of customers and prices introducing key analytics and visualization concepts.
-
-This internship was completed in the summer of 2021, my intention was to refactor the analysis code with a more updated approach to the visualizations.
-
-## 📊 Overview
-
-This project implements an optimized XGBoost classifier to predict customer churn in the energy/utility sector. The analysis includes:
-
-- Data preprocessing and feature engineering
-- Baseline and optimized model comparison
-- Hyperparameter tuning with Optuna
-- Comprehensive model evaluation (ROC-AUC, confusion matrices, precision-recall curves)
-- Feature importance analysis
-- SHAP (SHapley Additive exPlanations) values for model interpretability
-
-## ✨ Features
-
-- **Data Processing**: Aggregates time-series price data and engineers features from dates
-- **Model Optimization**: Uses Optuna for efficient Bayesian hyperparameter optimization
-- **Visualization**: Includes 30+ visualizations for model performance and interpretation
-- **Explainability**: SHAP analysis for understanding individual predictions
-
-## 🔧 Requirements
-```
-pandas>=1.5.0
-numpy>=1.23.0
-matplotlib>=3.6.0
-seaborn>=0.12.0
-scikit-learn>=1.2.0
-xgboost>=2.0.0
-optuna>=3.0.0
-shap>=0.42.0
-jupyter>=1.0.0
-```
-
-## 🚀 Installation
-
-1. Clone this repository:
-```bash
-git clone https://github.com/Randallesc/churn-prediction-xgboost.git
-cd churn-prediction-xgboost
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Place your data files (`client_data.csv` and `price_data.csv`) in the project directory
-
-## 📖 Usage
-
-1. Open the Jupyter notebook:
-```bash
-jupyter notebook churn-analysis-xgboost.ipynb
-```
-
-2. Update the `DATA_DIR` path in Section 2 if needed
-
-3. Run all cells in order
-
-## 📈 Model Performance
-
-- **Baseline Model**: ~0.68 ROC-AUC
-- **Optimized Model**: ~0.72+ ROC-AUC (after hyperparameter tuning)
-- **Cross-Validation**: 5-fold stratified CV with detailed performance metrics
-
-## 📁 Project Structure
-```
-├── churn_prediction_improved.ipynb  # Main analysis notebook
-├── client_data.csv                   # Customer data (not included)
-├── price_data.csv                    # Price history data (not included)
-├── models/                           # Saved models directory
-├── .gitignore                        # Git ignore file
-├── requirements.txt                  # Python dependencies
-└── README.md                         # This file
-```
-
-## 📊 Key Visualizations
-
-- ROC-AUC curves with cross-validation
-- Feature importance (multiple methods)
-- Partial dependence plots
-- SHAP summary, waterfall, and beeswarm plots
-- Confusion matrices
-- Precision-recall curves
-- Final performance dashboard
-
-## 🛠️ Technical Details
-
-### Data Processing
-- Merges client data with aggregated price history
-- Engineers date-based features (tenure, days since modification, etc.)
-- One-hot encodes categorical variables
-- Handles missing values
-
-### Model Training
-- Baseline XGBoost with sensible defaults
-- Optuna-based hyperparameter optimization
-- Stratified k-fold cross-validation
-- Early stopping to prevent overfitting
-
-### Evaluation Metrics
-- Accuracy, Precision, Recall
-- ROC-AUC score
-- Precision-Recall curves
-- Confusion matrices
-
-## 👤 Author
-
-**Your Name**
-- GitHub: [@RandallEsc](https://github.com/Randallesc)
-- LinkedIn: (https://linkedin.com/in/RandallEscalante)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Data sourced from [mention source if applicable]
-- Built with Python, XGBoost, and SHAP
-- Inspired by best practices in ML interpretability
-
-## 📝 Notes
-
-This is a learning project demonstrating:
-- End-to-end machine learning workflow
-- Model optimization techniques
-- ML interpretability with SHAP
-- Professional project documentation
-```
-
-6. **Save**: `Ctrl + S`
+A portfolio of data science and machine learning projects demonstrating advanced analytical techniques, optimization algorithms, and predictive modeling.
 
 ---
 
-### **Step 3: Create `requirements.txt`**
+## 📂 Projects
 
-1. **Right-click** in Explorer again
-2. **Select "New File"**
-3. **Name it**: `requirements.txt`
-4. **Press Enter**
-5. **Paste this content**:
+### 1. [Customer Churn Prediction with XGBoost](./01_churn_prediction/)
+
+Predicting customer churn in the energy/utility sector using XGBoost with hyperparameter optimization and SHAP interpretability.
+
+**Key Features:**
+- Hyperparameter tuning with Optuna (Bayesian optimization)
+- Feature engineering from time-series price data
+- SHAP analysis for model explainability
+- 30+ visualizations including ROC curves, confusion matrices, and feature importance
+
+**Technologies:** Python, XGBoost, Optuna, SHAP, scikit-learn  
+**Performance:** ROC-AUC improved from 0.68 (baseline) to 0.72+ (optimized)
+
+**Techniques:**
+- Stratified k-fold cross-validation
+- Time-series aggregation
+- One-hot encoding
+- Partial dependence plots
+
+---
+
+### 2. [Cutting Stock Problem - Column Generation Algorithm](./02_cutting_stock_column_generation/)
+
+Implementation of the column generation algorithm to solve the cutting stock optimization problem using linear programming.
+
+**Key Features:**
+- Complete column generation implementation
+- Interactive visualizations of cutting patterns
+- Step-by-step algorithm walkthrough
+- Dual price analysis and reduced cost calculations
+
+**Technologies:** Python, CVXPY, Linear Programming, Integer Programming  
+**Performance:** Optimal solution converged in 2 iterations
+
+**Techniques:**
+- Column generation
+- Restricted master problem (RMP)
+- Pricing problem (knapsack)
+- Duality theory
+- Integer programming
+
+---
+
+## 🎯 About This Repository
+
+This repository showcases advanced analytical skills across multiple domains:
+
+- **Machine Learning:** Predictive modeling, feature engineering, hyperparameter optimization
+- **Optimization:** Linear programming, column generation, integer programming
+- **Statistics:** Cross-validation, hypothesis testing, model evaluation
+- **Visualization:** matplotlib, seaborn, SHAP plots
+- **Software Engineering:** Clean code, documentation, version control
+
+---
+
+## 🛠️ Technologies & Tools
+
+**Languages:** Python
+
+**Machine Learning:** scikit-learn, XGBoost, Optuna
+
+**Optimization:** CVXPY, NumPy
+
+**Data Analysis:** Pandas, NumPy
+
+**Visualization:** Matplotlib, Seaborn, SHAP
+
+**Development:** Jupyter Notebooks, Git, VS Code
+
+---
+
+## 📊 Skills Demonstrated
+
+### Data Science
+- Feature engineering and selection
+- Model training and evaluation
+- Hyperparameter optimization
+- Cross-validation techniques
+- Ensemble methods
+
+### Optimization
+- Linear programming formulation
+- Column generation algorithms
+- Dual problem analysis
+- Integer programming
+- Decomposition methods
+
+### Communication
+- Clear documentation
+- Professional visualizations
+- Reproducible analysis
+- Technical writing
+
+---
+
+## 🚀 Getting Started
+
+Each project folder contains:
+- Complete Jupyter notebook with analysis
+- Project-specific README with detailed documentation
+- requirements.txt for dependencies
+- Data (where applicable and not proprietary)
+
+### Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/Randallesc/Advanced_Analytics_in_Python.git
+cd Advanced_Analytics_in_Python
 ```
-pandas>=1.5.0
-numpy>=1.23.0
-matplotlib>=3.6.0
-seaborn>=0.12.0
-scikit-learn>=1.2.0
-xgboost>=2.0.0
-optuna>=3.0.0
-shap>=0.42.0
-<<<<<<< HEAD
-jupyter>=1.0.0
-=======
-jupyter>=1.0.0
->>>>>>> 16f6357f4f81a33ca40683d5bcb493d37e8866f2
+
+Navigate to a project folder and install dependencies:
+```bash
+cd 01_churn_prediction
+pip install -r requirements.txt
+```
+
+Run the notebook:
+```bash
+jupyter notebook
+```
+
+---
+
+## 📈 Project Structure
+```
+Advanced_Analytics_in_Python/
+│
+├── 01_churn_prediction/
+│   ├── churn_model.ipynb
+│   ├── README.md
+│   ├── requirements.txt
+│   └── data/
+│
+├── 02_cutting_stock_column_generation/
+│   ├── cutting_stock_analysis.ipynb
+│   ├── README.md
+│   └── requirements.txt
+│
+├── .gitignore
+└── README.md (this file)
+```
+
+---
+
+## 🎓 Background
+
+These projects were developed as part of graduate-level coursework in:
+- Advanced Analytics
+- Operations Research
+- Machine Learning
+- Optimization Methods
+
+They demonstrate practical application of theoretical concepts to real-world problems.
+
+---
+
+## 📫 Contact
+
+**Randall**  
+GitHub: [@Randallesc](https://github.com/Randallesc)
+
+---
+
+## 📄 License
+
+MIT License - Feel free to use these projects for educational purposes.
+
+---
+
+## 🔜 Future Projects
+
+Planned additions:
+- Time series forecasting
+- Natural language processing
+- Deep learning applications
+- Network optimization
+- Simulation modeling
+
+---
+
+**⭐ If you find these projects helpful, please consider starring the repository!**
